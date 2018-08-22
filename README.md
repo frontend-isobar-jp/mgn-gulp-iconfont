@@ -2,14 +2,18 @@
 
 [↓ Download zip file](https://github.com/frontend-isobar-jp/mgn-gulp-iconfont/blob/master/mgn-gulp-iconfont.zip?raw=true)
 
+
+**ダウンロードしたファイルをプロジェクトルート直下に配置します。**
+
 ----
 
 
 # Iconfont |
 
-## install
-
+## npm install
+```
 $ npm install lodash gulp-iconfont gulp-iconfont-css gulp-rename gulp-consolidate --save
+```
 
 ## 1. setting追加
 
