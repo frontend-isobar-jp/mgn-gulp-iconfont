@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= fontName %></title>
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <link rel="stylesheet" href="<%= cssPath %>">
+    <style>
+      body { font-family: Gill Sans; text-align: center; background: #f7f7f7 }
+      body > h1 { color: #666; margin: 1em 0 }
+      .glyph { padding: 0 }
+      .glyph > li { display: inline-block; margin: .3em .2em; width: 14em; padding: 15px 0; background: #fff; border-radius: .5em; position: relative }
+      .glyph > li .s { display: block; margin-top: .1em; line-height: 0 }
+      .glyph > li > i > span { position: absolute; top: 0; left: 0; text-align: center; width: 100%; color: rgba(0,0,0,0) }
+      .glyph-name { font-size: .8em; color: #666; display: block; line-height: 1; }
+      .glyph-codepoint { color: #999; font-family: monospace; font-size: 10px; }
+      pre{
+        margin: 5px 0 0;
+        font-size: 12px;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%= fontName %></h1>
+    <ul class="glyph"><% _.each(glyphs, function(glyph) { %>
+      <li>
+        <i class="<%= className %> <%= className %>-<%= glyph.name %> <%= className %>-4x"><span><%= String.fromCodePoint(glyph.codepoint) %></span></i>
+        <span class="glyph-name">
+
+<pre>
+<code>
+&lt;i class="<%= className %> <%= className %>-<%= glyph.name %>"&gt;&lt;/i&gt;
+</code>
+</pre>
+
+</span>
+        <span class="glyph-codepoint"><%= glyph.codepoint.toString(16).toUpperCase() %></span>
+      </li><% }); %>
+    </ul>
+  </body>
+</html>
