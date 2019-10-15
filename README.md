@@ -53,7 +53,7 @@ const SETTING = {
             'guideline': [
                 {
                     'template': './src/fonts/tmp/fontawesome-style.html', // guidelineテンプレート
-                    'dist': ROOT_PATH + 'guide_line/component/', // guidelineテンプレート出力先
+                    'dist': ROOT_PATH + 'guideline/icon/', // guidelineテンプレート出力先
                     'path': '/assets/css/style.css', // guidelineテンプレート内で読み込むCSSファイル
                 }
             ]
