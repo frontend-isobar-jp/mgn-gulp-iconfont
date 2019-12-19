@@ -73,8 +73,9 @@ const Iconfont = require("./gulp/iconfont");
 ## 3. task定義
 
 ```
-gulp.task('iconfont', () => {
+gulp.task('iconfont', (done) => {
     Iconfont(SETTING);
+    done();
 });
 ```
 
@@ -82,9 +83,10 @@ gulp.task('iconfont', () => {
 （ taskListへ記述することで、default起動するようになります。 ）
 
 ```
-const taskList = [
-
-    'iconfont'
-
-]
+gulp.task(
+    "default",
+    gulp.series(gulp.parallel(
+        'iconfont'
+    ))
+);
 ```
